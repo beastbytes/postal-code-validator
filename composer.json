@@ -1,0 +1,40 @@
+{
+    "name": "beastbytes/postal-code-validator",
+    "type": "library",
+    "description": "Postal code validator",
+    "keywords": [
+        "postal code",
+        "validator"
+    ],
+    "support": {
+        "issues": "https://github.com/beastbytes/postal-code-validator/issues",
+        "source": "https://github.com/beastbytes/postal-code-validator"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Chris Yates",
+        "email": "chris.l.yates@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "yiisoft/validator": "3.0.x-dev"
+    },
+    "require-dev": {
+        "beastbytes/postal-code-data-php": "dev-master",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest",
+        "vimeo/psalm": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "BeastBytes\\PostalCode\\Validator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}
