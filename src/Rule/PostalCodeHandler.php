@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 2021 BeastBytes - All Rights Reserved
+ * @copyright Copyright (c) 2024 BeastBytes - All Rights Reserved
  * @license BSD 3-Clause
  */
 
@@ -34,6 +34,7 @@ final class PostalCodeHandler implements RuleHandlerInterface
         $postalCodeData = $rule->getPostalCodeData();
 
         $valid = false;
+        /** @var string $country */
         foreach ($rule->getCountries() as $country) {
             if (preg_match($postalCodeData->getPattern($country), $value)) {
                 $valid = true;
@@ -42,7 +43,12 @@ final class PostalCodeHandler implements RuleHandlerInterface
 
         if (!$valid) {
             $result->addError(
-                $rule->getMessage()
+                $rule->getMessage(),
+                [
+                    'attribute' => $context->getTranslatedProperty(),
+                    'value' => $value,
+                ],
+                ['postalCode']
             );
         }
 
