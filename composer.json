@@ -18,14 +18,14 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^8.0",
-        "yiisoft/validator": "3.0.x-dev"
+        "php": "^8.1",
+        "yiisoft/validator": "^2.0"
     },
     "require-dev": {
-        "beastbytes/postal-code-data-php": "dev-master",
-        "phpunit/phpunit": "^9.5",
+        "beastbytes/postal-code-data-php": "^1.0",
+        "phpunit/phpunit": "^10.0",
         "roave/security-advisories": "dev-latest",
-        "vimeo/psalm": "^4.3"
+        "vimeo/psalm": "^5.0"
     },
     "autoload": {
         "psr-4": {
@@ -34,7 +34,12 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests"
+            "BeastBytes\\PostalCode\\Validator\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
         }
     }
 }
