@@ -4,7 +4,8 @@
     "description": "Postal code validator",
     "keywords": [
         "postal code",
-        "validator"
+        "validator",
+        "yii3"
     ],
     "support": {
         "issues": "https://github.com/beastbytes/postal-code-validator/issues",
